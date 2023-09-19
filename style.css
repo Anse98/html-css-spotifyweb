@@ -1,0 +1,46 @@
+
+/************************************REGOLE GENERALI***************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+ul, ol, menu {
+  list-style: none;
+}
+
+:root {
+  --dark:#000000;
+  --dark-blue:#080B12;
+  --gray:#5D6066;
+  --blue:#141922;
+  --light:#FFFFFF;
+}
+
+body {
+  height: 100vh;
+}
+
+/*********************************** RESPONSIVE *******************************/
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+

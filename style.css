@@ -62,7 +62,7 @@ body {
 
 .row.toolbar .toolbar-song {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   align-items: center;
   padding-left: 12px;
 }
@@ -84,9 +84,13 @@ body {
   flex-direction: column;
 }
 
-.toolbar-song-description .informations span {
-  color: gray;
+.toolbar-song-description .informations .informations-title {
   font-size: 16px;
+}
+
+.toolbar-song-description .informations .song {
+  color: gray;
+  font-size: 14px;
 }
 
 .toolbar-song .toolbar-song-icons {
@@ -95,9 +99,9 @@ body {
   gap: 2px;
 }
 
-.toolbar-song .toolbar-song-icons span {
+.toolbar-song .toolbar-song-icons .icon {
   color:gray;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 

@@ -21,11 +21,30 @@ ul, ol, menu {
   --gray:#5D6066;
   --blue:#141922;
   --light:#FFFFFF;
+  --dark-gray:#282828;
 }
 
 body {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.main-container {
+  flex-grow: 1;
+}
+
+.toolbar-container {
+  height: auto;
+}
+
+/********************************TOOLBAR*******************************/
+.toolbar-container {
+  background-color: var(--dark-gray);
+  color: var(--light);
+}
+
+
 
 /*********************************** RESPONSIVE *******************************/
 

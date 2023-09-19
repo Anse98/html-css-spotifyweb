@@ -24,6 +24,7 @@ ul, ol, menu {
   --dark-gray:#282828;
   --light-gray:#6F6F6F;
   --fluo-green:#86C52B;
+  --dark-white:#D2D2D2;
 }
 
 body {
@@ -38,6 +39,11 @@ body {
 }
 
 .main-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+.main-content {
   flex-grow: 1;
 }
 
@@ -58,9 +64,6 @@ body {
   background-color: #C1C1C1;
   border-radius: 999px;
 }
-
-/*********************************** DEBUG ******************************/
-
 
 /********************************TOOLBAR*******************************/
 
@@ -172,7 +175,43 @@ body {
 }
 /* fine parte destra toolbar */
 
+/************************************SIDEBAR***********************************/
+.sidebar {
+  width:50px;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.sidebar-img-container,
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-img-container figure:not(:first-child) {
+  width: 28px;
+  margin-bottom: 4px;
+}
+
+.sidebar-img-container figure:first-child {
+  padding-top: 6px;
+  margin-bottom: 14px;
+  width: 38px;
+}
+
+.sidebar-footer .profile img {
+  background-color: #808080;
+  border-radius: 999px;
+  width:28px;
+}
+
+.sidebar-footer .download img {
+  width: 20px;
+  margin-bottom: 24px;
+}
 
 
 /*********************************** RESPONSIVE *******************************/

@@ -22,12 +22,18 @@ ul, ol, menu {
   --blue:#141922;
   --light:#FFFFFF;
   --dark-gray:#282828;
+  --light-gray:#6F6F6F;
 }
 
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family:'Open Sans', sans-serif;
+}
+
+.row {
+  display: flex;
 }
 
 .main-container {
@@ -38,11 +44,62 @@ body {
   height: auto;
 }
 
+/*********************************** DEBUG ******************************/
+.toolbar-container {
+  padding: 20px 0;
+}
+
 /********************************TOOLBAR*******************************/
 .toolbar-container {
   background-color: var(--dark-gray);
   color: var(--light);
 }
+
+.row.toolbar {
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.row.toolbar .toolbar-song {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.row.toolbar .toolbar-song .toolbar-song-description {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.toolbar-song .toolbar-song-description img {
+  display: block;
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+
+.toolbar-song .toolbar-song-description .informations {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar-song-description .informations span {
+  color: gray;
+  font-size: 16px;
+}
+
+.toolbar-song .toolbar-song-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toolbar-song .toolbar-song-icons span {
+  color:gray;
+  font-size: 20px;
+}
+
 
 
 

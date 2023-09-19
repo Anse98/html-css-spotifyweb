@@ -44,12 +44,28 @@ body {
   height: auto;
 }
 
+.slider {
+  background-color: #5A5A5A;
+  width:85px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.volume-slider {
+  width: 25%;
+  height: 100%;
+  background-color: #C1C1C1;
+  border-radius: 999px;
+}
+
 /*********************************** DEBUG ******************************/
 .toolbar-container {
   padding: 20px 0;
 }
 
 /********************************TOOLBAR*******************************/
+
+/* parte sinistra toolbar */
 .toolbar-container {
   background-color: var(--dark-gray);
   color: var(--light);
@@ -103,6 +119,15 @@ body {
   color:gray;
   font-size: 16px;
 }
+/* fine parte sinistra toolbar */
+
+/* parte destra toolbar */
+.row.toolbar .toolbar-settings {
+  display: flex;
+  gap:10px;
+  align-items: center;
+}
+/* fine parte destra toolbar */
 
 
 

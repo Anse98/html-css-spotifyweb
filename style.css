@@ -43,7 +43,7 @@ body {
 
 .toolbar-container {
   height: auto;
-  padding:20px 12px;
+  padding: 10px 10px 20px 10px;
 }
 
 .slider {
@@ -102,9 +102,11 @@ body {
   font-size: 16px;
 }
 
-.toolbar-song-description .informations .song {
+.toolbar-song-description .informations .informations-song {
   color: gray;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .toolbar-song .toolbar-song-icons {
@@ -166,6 +168,7 @@ body {
 
 .row.toolbar .toolbar-settings .slider {
   width: 85px;
+  display: none;
 }
 /* fine parte destra toolbar */
 
@@ -177,10 +180,28 @@ body {
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
+  /* inizio toolbar */
+  .toolbar-song-description .informations .informations-song {
+    flex-direction: row;
+    gap: 6px;
+  }
+  /* fine toolbar */
  }
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+
+  /* inizio toolbar*/
+  .toolbar-song .toolbar-song-icons {
+    flex-direction:row;
+    gap: 14px;
+    margin-left: 18px;
+  }
+
+  .row.toolbar .toolbar-settings .slider {
+    display: block;
+  }
+  /* fine toolbar */
 
  }
 

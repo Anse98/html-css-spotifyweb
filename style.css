@@ -109,7 +109,8 @@ a {
 }
 
 .created-for,
-.recents{
+.recents,
+.popular-artists {
   padding-left: 14px;
   padding-right: 24px;
 }
@@ -417,17 +418,25 @@ a {
 
 /* fine main content body albums */
 
-/* inizio created for */
-.created-for .created-for-title {
+/*created for, popular artists */
+.created-for .created-for-title,
+.popular-artists-title {
   padding-top: 30px;
   padding-bottom:10px;
 }
 
-.created-for .created-for-subtitle {
+.created-for .created-for-subtitle,
+.popular-artists-subtitle{
   color:#797C80;
   padding-bottom: 24px;
 }
-/* fine created for */
+/*fine created for, popular artists */
+
+/* popular artist  */
+.container-popular-artists .album figure img {
+  border-radius: 999px;
+}
+/* fine popular artists */
 
 
 
@@ -518,44 +527,36 @@ a {
   }
   /* fine toolbar */
 
-  /* inizio recents */
+  /* recents, crated for, popular artists */
   .container-recents .row {
     row-gap: 0;
   }
 
-  .container-recents .row .col-6 {
+  .container-recents .row .col-6,
+  .container-created-for .row .col-6 ,
+  .container-popular-artists .row .col-6{
     flex-basis: calc((100% / 12) * 3);
   }
 
   .container-recents .album .album-authors {
     line-height: 40px;
   }
-  /* fine recents */
-
-  /* inizio created for */
-  .container-created-for .row .col-6 {
-    flex-basis: calc((100% / 12) * 3);
-  }
-  /* fine created for */
+  /* fine recents, crated for, popular artists */
 
  }
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  /* inizio recents */
-  .container-recents .row .col-6 {
+  /*  recents, crated for, popular artists */
+  .container-recents .row .col-6,
+  .container-created-for .row .col-6,
+  .container-popular-artists .row .col-6{
     flex-basis: calc((100% / 12) * 2);
   }
 
   .container-recents .album .album-authors {
     line-height:initial;
   }
-  /* fine recents */
-
-  /* inizio created for */
-  .container-created-for .row .col-6 {
-    flex-basis: calc((100% / 12) * 2);
-  }
-  /* fine created for */
+  /*fine recents, crated for, popular artists */
  }
 

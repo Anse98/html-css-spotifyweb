@@ -66,7 +66,6 @@ a {
 
 .relative-container {
   position: relative;
-  width: 100%;
 }
 
 .slider {
@@ -208,6 +207,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   color: gray;
+  flex-shrink: 0;
 }
 
 .sidebar-nav-container,
@@ -280,6 +280,9 @@ a {
 
 
 /* parte bassa sidebar */
+.sidebar-footer .relative-container {
+  width: 100%;
+}
 
 .sidebar-footer .wrapper a {
   display: none;
@@ -309,8 +312,10 @@ a {
 }
 
 /*********************************MAIN CONTENT*********************************/
+
+/* header main content */
 .main-content-header {
-  height: 90px;
+  height: 100px;
   background-color: var(--dark-blue);
   display: flex;
   justify-content: flex-end;
@@ -330,7 +335,47 @@ a {
   padding: 0 42px;
   text-transform: uppercase;
 }
+/* fine header main content */
 
+/* main content body */
+.navbar-container {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin:0 auto;
+}
+
+.navbar-container .navbar {
+  padding-top: 16px;
+}
+
+.navbar-container .navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: #797C80;
+  text-transform: uppercase;
+  justify-content: center;
+  row-gap: 40px;
+  font-weight: 500;
+}
+
+.navbar-list .relative-container::after {
+  content:"";
+  position: absolute;
+  background-color: var(--fluo-green);
+  width: 35%;
+  height: 2px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0; 
+}
+
+.navbar-list .relative-container {
+  padding-bottom: 4px;
+}
+
+
+/* fine main content body */
 
 
 

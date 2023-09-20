@@ -46,6 +46,10 @@ body,
   row-gap: 6px;
 }
 
+.pad-left {
+  padding-left: 14px;
+}
+
 .col-3 {
   flex-basis: calc((100% / 12) * 3);
 }
@@ -140,7 +144,6 @@ figure {
   padding-left: 14px;
   padding-right: 24px;
 }
-
 
 /********************************TOOLBAR*******************************/
 
@@ -290,11 +293,16 @@ figure {
   width: 38px;
 }
 
-.sidebar-nav-container .wrapper.light {
-  color: var(--light);
+.nav-sidebar {
+  width: 100%;
 }
 
-.sidebar-nav-container .wrapper a {
+.home-container .wrapper.light {
+  color: var(--light);
+  padding-left: 14px;
+}
+
+.nav-sidebar .wrapper a {
   display: none;
 }
 
@@ -356,6 +364,10 @@ figure {
 
 .sidebar-footer .download img {
   width: 20px;
+}
+
+.footer-download figure.download {
+  margin-bottom: 20px;
 }
 
 .footer-profile .profile-name {
@@ -530,7 +542,12 @@ figure {
   /* inizio sidebar */
   .sidebar {
     width:230px;
-    padding:0 20px;
+  }
+
+  .sidebar .logo-container,
+  .sidebar-playlist,
+  .sidebar-footer {
+    padding-left: 14px;
   }
 
   .sidebar-nav-container,
@@ -544,6 +561,11 @@ figure {
 
   .sidebar-nav-container .big-logo {
     display: block;
+  }
+
+  .home-container {
+  width: 100%;
+  border-left: #86C52B 4px solid; 
   }
 
   .sidebar-nav-container .wrapper a {
@@ -579,10 +601,17 @@ figure {
     bottom:0; 
   }
 
+  .footer-download figure.download {
+    margin-bottom: 0px;
+  }
+
   .footer-profile figure.profile {
     margin-left:0;
   }
   /* fine sidebar */
+  
+  
+
  }
 
  /* Medium devices (tablets, 768px and up) */

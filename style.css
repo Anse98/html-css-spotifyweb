@@ -46,6 +46,10 @@ body,
   row-gap: 6px;
 }
 
+.col-3 {
+  flex-basis: calc((100% / 12) * 3);
+}
+
 .col-6 {
   flex-basis: calc((100% / 12) * 6);
 }
@@ -64,6 +68,7 @@ a {
   flex-grow: 1;
   background-color: var(--blue);
   overflow-y: scroll;
+  color: var(--light);
 }
 
 .toolbar-container {
@@ -93,6 +98,22 @@ a {
   align-items: center;
   gap: 7px;
 }
+
+.album {
+  padding: 0 6px;
+  text-align: center;
+} 
+
+.album-title {
+  margin: 10px 0;
+}
+
+.created-for,
+.recents{
+  padding-left: 14px;
+  padding-right: 24px;
+}
+
 
 /********************************TOOLBAR*******************************/
 
@@ -334,7 +355,6 @@ a {
 }
 
 .main-content-header .button a {
-  color: var(--light);
   border: solid 1px var(--light);
   border-radius: 999px;
   display: inline-block;
@@ -386,24 +406,9 @@ a {
 /* fine main content navbar*/
 
 /* main content body albums */
-.recents {
-  color: var(--light);
-  padding-left: 14px;
-  padding-right: 24px;
-}
-
 .recents .recents-title {
   margin-bottom: 28px;
   letter-spacing: 1px;
-}
-
-.container-recents .album {
-  padding: 0 6px;
-  text-align: center;
-} 
-
-.container-recents .album .album-title {
-  margin: 10px 0;
 }
 
 .container-recents .album .album-authors {
@@ -411,6 +416,18 @@ a {
 }
 
 /* fine main content body albums */
+
+/* inizio created for */
+.created-for .created-for-title {
+  padding-top: 30px;
+  padding-bottom:10px;
+}
+
+.created-for .created-for-subtitle {
+  color:#797C80;
+  padding-bottom: 24px;
+}
+/* fine created for */
 
 
 
@@ -484,10 +501,6 @@ a {
     margin-left:0;
   }
   /* fine sidebar */
-
-  /* inizio recents */
-  
-  /* fine recents */
  }
 
  /* Medium devices (tablets, 768px and up) */
@@ -519,6 +532,12 @@ a {
   }
   /* fine recents */
 
+  /* inizio created for */
+  .container-created-for .row .col-6 {
+    flex-basis: calc((100% / 12) * 3);
+  }
+  /* fine created for */
+
  }
 
  /* Large devices (desktops, 992px and up) */
@@ -532,5 +551,11 @@ a {
     line-height:initial;
   }
   /* fine recents */
+
+  /* inizio created for */
+  .container-created-for .row .col-6 {
+    flex-basis: calc((100% / 12) * 2);
+  }
+  /* fine created for */
  }
 

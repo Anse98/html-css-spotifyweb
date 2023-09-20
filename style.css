@@ -84,6 +84,7 @@ a {
   background-color: #5A5A5A;
   height: 4px;
   border-radius: 999px;
+  position: relative;
 }
 
 .volume-slider {
@@ -91,6 +92,18 @@ a {
   height: 100%;
   background-color: #C1C1C1;
   border-radius: 999px;
+}
+
+.progress-handler {
+  width: 12px;
+  height: 12px;
+  background-color: var(--light);
+  border-radius: 999px;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50% , -50% );
+  display: none;
 }
 
 .wrapper {
@@ -103,6 +116,19 @@ a {
   padding: 0 6px;
   text-align: center;
 } 
+
+figure {
+  position: relative;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  font-size: 60px;
+  display: none;
+}
 
 .album-title {
   margin: 10px 0;
@@ -439,8 +465,55 @@ a {
 /* fine popular artists */
 
 
+/*********************************HOVER***************************************/
 
+.album img:hover {
+  cursor: pointer;
+}
 
+.album:hover img {
+  opacity: 0.7;
+}
+
+.album:hover .play-icon {
+  display: block;
+}
+
+.button a:hover {
+  font-size: 18px;
+  line-height: 42px;
+}
+
+.navbar-list li:hover,
+.wrapper a:hover,
+.sidebar-playlist .playlist-intro:hover,
+.playlist-list li:hover,
+.toolbar-container .toolbar .icon:hover {
+  color: var(--light);
+  cursor: pointer;
+}
+
+.wrapper a:hover,
+.sidebar-playlist .playlist-intro:hover,
+.playlist-list li:hover {
+  font-size: 18px;
+}
+
+.toolbar  .toolbar-player .bigger-icon i:hover {
+  font-size: 44px;
+}
+
+.toolbar .slider:hover {
+  cursor: pointer;
+}
+
+.toolbar .slider:hover .volume-slider {
+  background-color: var(--fluo-green);
+}
+
+.toolbar .slider:hover .progress-handler {
+  display: block;
+}
 
 /*********************************** RESPONSIVE *******************************/
 

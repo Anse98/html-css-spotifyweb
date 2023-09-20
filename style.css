@@ -42,6 +42,20 @@ body,
 
 .row {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.col-2 {
+  flex-basis: calc((100% / 12) * 2);
+}
+
+.col-3 {
+  flex-basis: calc((100% / 12) * 3);
+}
+
+.col-6 {
+  flex-basis: calc((100% / 12) * 6);
 }
 
 a {
@@ -57,6 +71,7 @@ a {
 .main-content {
   flex-grow: 1;
   background-color: var(--blue);
+  overflow-y: scroll;
 }
 
 .toolbar-container {
@@ -338,10 +353,13 @@ a {
 /* fine header main content */
 
 /* main content body */
+
+/* main content navbar */
 .navbar-container {
   max-width: 1000px;
   padding: 0 20px;
   margin:0 auto;
+  margin-bottom: 36px;
 }
 
 .navbar-container .navbar {
@@ -373,9 +391,36 @@ a {
 .navbar-list .relative-container {
   padding-bottom: 4px;
 }
+/* fine main content navbar*/
+
+/* main content body albums */
+.recents {
+  color: var(--light);
+  padding-left: 14px;
+  padding-right: 24px;
+}
+
+.recents .recents-title {
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.container-recents .album {
+  padding: 0 6px;
+  text-align: center;
+} 
+
+.container-recents .album .album-title {
+  margin: 10px 0;
+}
+
+.container-recents .album .album-authors {
+  color:#797C80;
+}
+
+/* fine main content body albums */
 
 
-/* fine main content body */
 
 
 

@@ -46,14 +46,6 @@ body,
   row-gap: 6px;
 }
 
-.col-2 {
-  flex-basis: calc((100% / 12) * 2);
-}
-
-.col-3 {
-  flex-basis: calc((100% / 12) * 3);
-}
-
 .col-6 {
   flex-basis: calc((100% / 12) * 6);
 }
@@ -492,6 +484,10 @@ a {
     margin-left:0;
   }
   /* fine sidebar */
+
+  /* inizio recents */
+  
+  /* fine recents */
  }
 
  /* Medium devices (tablets, 768px and up) */
@@ -509,10 +505,32 @@ a {
   }
   /* fine toolbar */
 
+  /* inizio recents */
+  .container-recents .row {
+    row-gap: 0;
+  }
+
+  .container-recents .row .col-6 {
+    flex-basis: calc((100% / 12) * 3);
+  }
+
+  .container-recents .album .album-authors {
+    line-height: 40px;
+  }
+  /* fine recents */
+
  }
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+  /* inizio recents */
+  .container-recents .row .col-6 {
+    flex-basis: calc((100% / 12) * 2);
+  }
 
+  .container-recents .album .album-authors {
+    line-height:initial;
+  }
+  /* fine recents */
  }
 

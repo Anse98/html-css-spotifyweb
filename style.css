@@ -207,7 +207,7 @@ figure {
 
 /* parte centrale toolbar */
 .toolbar-player {
-  flex-basis: 30%;
+  flex-basis: 100%;
   margin: 0 16px;
 }
 
@@ -301,9 +301,10 @@ figure {
 
 .sidebar .wrapper {
   justify-content: center;
+  position: relative;
 }
 
-.relative-container .wrapper.light {
+.wrapper.light {
   color: var(--light);
 }
 
@@ -483,8 +484,6 @@ figure {
   border-radius: 999px;
 }
 /* fine popular artists */
-
-
 /*********************************HOVER***************************************/
 
 .album img:hover {
@@ -519,6 +518,10 @@ figure {
   font-size: 18px;
 }
 
+.sidebar .wrapper:hover {
+  border-left:3px solid var(--fluo-green);
+}
+
 .toolbar  .toolbar-player .bigger-icon i:hover {
   font-size: 44px;
 }
@@ -549,6 +552,10 @@ figure {
     display: flex;
   }
 
+  .toolbar-player {
+    flex-basis: 33%;
+  }
+
   .row.toolbar .toolbar-song {
     display: flex;
   }
@@ -568,6 +575,10 @@ figure {
     padding-left: 14px;
   }
 
+  /* .sidebar .wrapper:hover {
+    border-left: var(--fluo-green) 3px solid;
+  } */
+
   .sidebar .logo-container,
   .sidebar-playlist {
     padding-left: 14px;
@@ -584,16 +595,6 @@ figure {
 
   .sidebar-nav-container .big-logo {
     display: block;
-  }
-
-  .nav-sidebar .relative-container::before {
-    content:"";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #86C52B;
-    width:3px;
-    height: 100%;
   }
 
   .sidebar-nav-container .wrapper a {

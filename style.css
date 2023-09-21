@@ -154,7 +154,7 @@ figure {
 }
 
 .row.toolbar {
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 } 
 
@@ -162,6 +162,7 @@ figure {
   display: flex;
   gap: 18px;
   align-items: center;
+  display: none;
 }
 
 .row.toolbar .toolbar-song .toolbar-song-description {
@@ -247,6 +248,7 @@ figure {
   display: flex;
   gap:10px;
   align-items: center;
+  display: none;
 }
 
 .row.toolbar .toolbar-settings .slider {
@@ -297,9 +299,12 @@ figure {
   width: 100%;
 }
 
-.home-container .wrapper.light {
+.sidebar .wrapper {
+  justify-content: center;
+}
+
+.relative-container .wrapper.light {
   color: var(--light);
-  padding-left: 14px;
 }
 
 .nav-sidebar .wrapper a {
@@ -386,6 +391,9 @@ figure {
   background-color: var(--dark-blue);
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .main-content-header .button {
@@ -533,6 +541,18 @@ figure {
 @media (min-width: 576px) { 
 
   /* inizio toolbar */
+  .row.toolbar {
+    justify-content: space-between;
+  } 
+
+  .row.toolbar .toolbar-settings {
+    display: flex;
+  }
+
+  .row.toolbar .toolbar-song {
+    display: flex;
+  }
+
   .toolbar-song-description .informations .informations-song {
     flex-direction: row;
     gap: 6px;
@@ -543,10 +563,13 @@ figure {
   .sidebar {
     width:230px;
   }
+  .sidebar .wrapper {
+    justify-content: flex-start;
+    padding-left: 14px;
+  }
 
   .sidebar .logo-container,
-  .sidebar-playlist,
-  .sidebar-footer {
+  .sidebar-playlist {
     padding-left: 14px;
   }
 
@@ -563,9 +586,14 @@ figure {
     display: block;
   }
 
-  .home-container {
-  width: 100%;
-  border-left: #86C52B 4px solid; 
+  .nav-sidebar .relative-container::before {
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #86C52B;
+    width:3px;
+    height: 100%;
   }
 
   .sidebar-nav-container .wrapper a {
@@ -596,7 +624,7 @@ figure {
     content:" ";
     position: absolute;
     background-color: #808080;
-    width: 100%;
+    width: 80%;
     height: 1px;
     bottom:0; 
   }
